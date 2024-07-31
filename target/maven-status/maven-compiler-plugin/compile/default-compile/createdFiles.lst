@@ -1,0 +1,15 @@
+com\nagarro\retail\model\Item.class
+com\nagarro\retail\discount\strategy\NoDiscount.class
+com\nagarro\retail\discount\chain\FlatDiscountHandler.class
+com\nagarro\retail\discount\strategy\AffiliateDiscount.class
+com\nagarro\retail\discount\chain\DiscountHandler.class
+com\nagarro\retail\configuration\DiscountHandlerConfig.class
+com\nagarro\retail\discount\chain\PercentageDiscountHandler.class
+com\nagarro\retail\model\Bill.class
+com\nagarro\retail\model\User.class
+com\nagarro\retail\discount\strategy\CustomerDiscount.class
+com\nagarro\retail\enums\UserType.class
+com\nagarro\retail\RetailApplication.class
+com\nagarro\retail\discount\strategy\DiscountFactory.class
+com\nagarro\retail\discount\strategy\EmployeeDiscount.class
+com\nagarro\retail\discount\strategy\UserTypeDiscountI.class

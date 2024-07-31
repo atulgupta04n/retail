@@ -1,0 +1,8 @@
+com\nagarro\retail\discount\chain\PercentageDiscountHandlerTest.class
+com\nagarro\retail\model\BillTest.class
+com\nagarro\retail\RetailApplicationTests.class
+com\nagarro\retail\discount\chain\FlatDiscountHandlerTest.class
+com\nagarro\retail\discount\strategy\EmployeeDiscountTest.class
+com\nagarro\retail\discount\strategy\NoDiscountTest.class
+com\nagarro\retail\discount\strategy\CustomerDiscountTest.class
+com\nagarro\retail\discount\strategy\AffiliateDiscountTest.class

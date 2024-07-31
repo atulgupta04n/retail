@@ -1,9 +1,5 @@
 # retail
 
-UML: Check UML.jpeg
-![UML.jpeg](UML.jpeg)
-
-
 ## Requirements
 - Java 11 or higher
 - Maven
@@ -35,3 +31,6 @@ UML: Check UML.jpeg
     ```bash
     mvn test
     ```
+
+UML:
+![UML.jpeg](UML.jpeg)

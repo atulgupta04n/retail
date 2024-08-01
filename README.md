@@ -1,23 +1,26 @@
 # Retail store application
 This application is a retail website offering different discounts to different types of user.
 
-## Working
-This application uses chain of responsibility design pattern and factory design pattern.
-In the Discount Handler Config, discount handler chain is created with first the percentage discount calculator and then
-nextHandler is marked as flatDiscountCalculator. 
-The Bill class provides the method getAmountPayable(), and autowires this discountHandler to calculate the percentageDiscount
-and then the flatDiscount.
-In PercentageDiscountHandler class, percentage discount is calculated on non grocery items using factory design pattern,
-where different discount is given based on the userType(Employee, Affiliate or Customer).
+## Project Overview
+This project is a retail store discount calculator implemented using Spring Boot. The application calculates the net payable amount for a bill by applying various discounts based on user type and the nature of items in the bill. The design leverages the Chain of Responsibility and Factory design patterns to achieve flexibility and scalability.
 
-Eg of discount:
-UserType: EMPLOYEE
-Item1: non-grocery Laptop 500
-Item2: Grocery Apple 200
-Total amount: 700
-Percentage discount on non grocery: 30% of 500 = 150
-Flat discount =  Total amount/100*5 = 700/100*5 = 35
-Payable amount = 700 - 150 - 35 = 515
+## Working
+This application uses the Chain of Responsibility design pattern and the Factory design pattern.
+
+- In the `DiscountHandlerConfig`, the discount handler chain is created with the first handler being the `PercentageDiscountHandler`, followed by the `FlatDiscountHandler`.
+- The `Bill` class provides the method `getAmountPayable()` and autowires this discountHandler to calculate the percentage discount and then the flat discount.
+- In the `PercentageDiscountHandler` class, the percentage discount is calculated on non-grocery items using the Factory design pattern, where different discounts are given based on the `UserType` (Employee, Affiliate, or Customer).
+
+### Example of Discount Calculation
+**UserType:** EMPLOYEE  
+**Item1:** non-grocery Laptop 500  
+**Item2:** Grocery Apple 200  
+**Total amount:** 700
+
+**Calculations:**
+- **Percentage discount on non-grocery:** 30% of 500 = 150
+- **Flat discount:** Total amount/100 * 5 = 700/100 * 5 = 35
+- **Payable amount:** 700 - 150 - 35 = 515
 
 UML:
 ![UML.jpeg](UML.jpeg)
@@ -55,3 +58,6 @@ UML:
     mvn test
     ```
 
+
+## Conclusion
+This project demonstrates the use of Chain of Responsibility and Factory design patterns to create a flexible and maintainable discount calculation system for a retail store. It includes comprehensive unit tests to ensure the correctness of the discount calculations.

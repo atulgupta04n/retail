@@ -18,7 +18,7 @@ public class PercentageDiscountHandler implements DiscountHandler {
     public double handleDiscount(Bill bill, double amount) {
         User user = bill.getUser();
         UserTypeDiscountI strategy = DiscountFactory.getDiscountStrategy(user.getUserType());
-        amount = strategy.getDiscountedAmount(user, amount);
+        amount = strategy.getDiscountedAmount(user, bill.getNonGroceryAmount());
 
         if (nextHandler != null) {
             amount = nextHandler.handleDiscount(bill, amount);
